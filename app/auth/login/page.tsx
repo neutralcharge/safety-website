@@ -89,7 +89,7 @@ export default function LoginPage() {
         className="bg-pattern absolute inset-0 opacity-10"
         style={{
           backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23059669' fillOpacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+            "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23059669' fillOpacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E\")",
           backgroundSize: "60px 60px",
         }}
       />
@@ -127,7 +127,8 @@ export default function LoginPage() {
                   </div>
                 </div>
 
-                <div className="space-y-2 animate-item">
+                {/* Added mb-6 to create a gap between email and password inputs */}
+                <div className="space-y-2 animate-item mb-6">
                   <div className="flex items-center justify-between">
                     <Label htmlFor="password" className="text-gray-700">
                       Password
@@ -154,7 +155,8 @@ export default function LoginPage() {
                     />
                   </div>
                 </div>
-                <Link href="/">
+                
+                {/* Removed Link wrapper, kept Button as submit type */}
                 <Button
                   type="submit"
                   className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition-all animate-item"
@@ -169,15 +171,14 @@ export default function LoginPage() {
                     "Sign in"
                   )}
                 </Button>
-                  </Link>
-              </form>
 
-              <div className="mt-6 text-center text-sm text-gray-600 animate-item">
-                Don't have an account?{" "}
-                <Link href="/auth/signup" className="font-medium text-green-600 hover:text-green-800 hover:underline">
-                  Create an account
-                </Link>
-              </div>
+                <div className="mt-6 text-center text-sm text-gray-600 animate-item">
+                  Don't have an account?{" "}
+                  <Link href="/auth/signup" className="font-medium text-green-600 hover:text-green-800 hover:underline">
+                    Create an account
+                  </Link>
+                </div>
+              </form>
             </div>
           </div>
 
@@ -198,4 +199,3 @@ export default function LoginPage() {
     </div>
   )
 }
-
