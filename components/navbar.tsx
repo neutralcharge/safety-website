@@ -61,10 +61,10 @@ export default function Navbar() {
               </Link>
             ) : (
               <div className="flex space-x-2">
-                <Link href="/login">
+                <Link href="./app/auth/login">
                   <Button variant="outline">Login</Button>
                 </Link>
-                <Link href="/register">
+                <Link href="./app/auth/signup">
                   <Button>Sign Up</Button>
                 </Link>
               </div>
