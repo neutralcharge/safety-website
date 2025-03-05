@@ -155,20 +155,23 @@ export default function LoginPage() {
                   </div>
                 </div>
 
-                <Button
-                  type="submit"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition-all animate-item"
-                  disabled={isLoading}
-                >
-                  {isLoading ? (
-                    <div className="flex items-center justify-center">
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Signing in...
-                    </div>
-                  ) : (
-                    "Sign in"
-                  )}
-                </Button>
+                {/* Add margin-top to create a gap between the password input and the button */}
+                <div className="mt-6 animate-item">
+                  <Button
+                    type="submit"
+                    className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition-all"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? (
+                      <div className="flex items-center justify-center">
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Signing in...
+                      </div>
+                    ) : (
+                      "Sign in"
+                    )}
+                  </Button>
+                </div>
               </form>
 
               <div className="mt-6 text-center text-sm text-gray-600 animate-item">
