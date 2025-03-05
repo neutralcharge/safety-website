@@ -154,7 +154,7 @@ export default function LoginPage() {
                     />
                   </div>
                 </div>
-
+                <Link href="/">
                 <Button
                   type="submit"
                   className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition-all animate-item"
@@ -169,6 +169,7 @@ export default function LoginPage() {
                     "Sign in"
                   )}
                 </Button>
+                  </Link>
               </form>
 
               <div className="mt-6 text-center text-sm text-gray-600 animate-item">
