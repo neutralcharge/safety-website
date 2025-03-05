@@ -9,8 +9,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Search, Filter, ThumbsUp, MessageSquare, MoreHorizontal, Calendar, TrendingUp } from "lucide-react"
-
-// Mock data for forum discussions
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
 const mockDiscussions = [
   {
     id: "1",
@@ -89,7 +88,7 @@ const mockDiscussions = [
   },
 ]
 
-// Mock data for updates on hazard resolutions
+
 const mockUpdates = [
   {
     id: "1",
